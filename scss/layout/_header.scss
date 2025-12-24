@@ -1,0 +1,127 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+}
+.top__bar {
+    position: relative;
+    @extend %flexItemCenter;
+    padding: 30px 0;
+    @include abstracts.breakpoint(sm) {
+        justify-content: space-between;
+    }
+    @include abstracts.breakpoint(md) {
+        justify-content: space-between;
+    }
+    @include abstracts.breakpoint(lg) {
+        justify-content: space-between;
+    }
+    &--more {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+    }
+}
+.navbar {
+    margin-left: 144px;
+    @include abstracts.breakpoint(xl) {
+        margin-left: 25px;
+    }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+
+    &__list {
+        @extend %flexItemCenter;
+    }
+    &__item {
+        &:first-child a {
+            padding-left: 0;
+        }
+        &:last-child a {
+            padding-right: 0;
+        }
+        &:hover .dropdown {
+            display: block;
+        }
+    }
+    &__link {
+        @extend %flexItemCenter;
+        padding: 0 15px;
+        gap: 6px;
+        color: var(--text-color);
+        /* Medium 15 */
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+.top-act {
+    @extend %flexItemCenter;
+
+    margin-left: auto;
+    gap: 20px;
+    @include abstracts.breakpoint(lg) {
+        margin-left: 0;
+    }
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0;
+    }
+
+    &__group {
+        @extend %flexItemCenter;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
+    }
+    &__group--single {
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
+    }
+    &__group {
+        @include abstracts.breakpoint(sm) {
+            display: none;
+        }
+    }
+    &__group--single &__btn {
+        padding: 13px;
+    }
+    &__btn {
+        @extend %flexItemCenter;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    &__title {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+    &__separate {
+        width: 1px;
+        height: 30px;
+        background: var(--top-act-group-separate);
+    }
+    &__avt {
+        display: block;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px 2px var(--top-act-avt-shadow);
+    }
+}
