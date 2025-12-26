@@ -10,19 +10,23 @@ html {
 body {
     font-family: "Gordita", sans-serif;
     font-size: 1.6rem;
+    color: var(--text-color) !important;
     background-color: var(--body-bg-color);
 }
 a {
     text-decoration: none;
     color: inherit;
 }
-
+a,
+img,
 input,
 button,
 textarea,
 select {
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
+    --webkit-tap-highlight-color: transparent;
 }
 
 button {

@@ -2,8 +2,8 @@
 
 html.dark {
     --text-color: #fff;
-    --icon-color: brightness(0) saturate(100%) invert(99%) sepia(22%)
-        saturate(25%) hue-rotate(72deg) brightness(113%) contrast(100%);
+    --icon-color: brightness(0) saturate(100%) invert(99%) sepia(22%) saturate(25%) hue-rotate(72deg) brightness(113%)
+        contrast(100%);
 
     --header-bg-color: #171c28;
     --body-bg-color: #292e39;
@@ -12,14 +12,23 @@ html.dark {
     --top-act-group-separate: #ededf6;
     --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
 
-    // dropdown
-    --dropdown-bg-color: #404654;
-    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-    --drowdown-arrow-color: brightness(0) saturate(100%) invert(25%) sepia(8%)
-        saturate(1263%) hue-rotate(184deg) brightness(90%) contrast(83%);
-}
-@include abstracts.breakpoint(lg) {
-    html {
-        --top-act-group-bg-color: #292e39;
+    @include abstracts.breakpoint(lg) {
+        html {
+            --top-act-group-bg-color: #292e39;
+            --header-shadow-color: rgba(0, 0, 0, 0.2);
+        }
     }
+
+    // dropdown
+    --dropdown-bg-color: #343947;
+    --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
+    --drowdown-arrow-color: brightness(0) saturate(100%) invert(21%) sepia(10%) saturate(1070%) hue-rotate(187deg)
+        brightness(92%) contrast(90%);
+    --top-menu-boder-color: #171c28;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2038%) hue-rotate(171deg)
+        brightness(121%) contrast(95%);
+
+    //  shibar
+    --sidebar-bg-color: #292e39;
+    --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
 }
