@@ -12,14 +12,14 @@ html.dark {
     --top-act-group-separate: #ededf6;
     --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         html {
             --top-act-group-bg-color: #292e39;
             --header-shadow-color: rgba(0, 0, 0, 0.2);
         }
     }
 
-    // dropdown
+    // Dropdown
     --dropdown-bg-color: #343947;
     --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
     --drowdown-arrow-color: brightness(0) saturate(100%) invert(21%) sepia(10%) saturate(1070%) hue-rotate(187deg)
@@ -28,7 +28,22 @@ html.dark {
     --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2038%) hue-rotate(171deg)
         brightness(121%) contrast(95%);
 
-    //  shibar
+    //  Sidebar
     --sidebar-bg-color: #292e39;
     --sidebar-shadow-color: rgba(23, 28, 40, 0.4);
+
+    // Cate-item
+    --cate-item-bg-color: #171c28;
+    --cate-item-thumb-color: #292e39;
+    --cate-item-title-color: #fff;
+
+    // Buttons
+
+    --filter-btn-color: #292e39;
+    --filter-btn-bg-color: #171c28;
+
+    // Product card
+
+    --product-card-bg-color: #171c28;
+    --product-card-shadow-color: rgba(0, 0, 0, 0.2);
 }
