@@ -37,14 +37,19 @@ select {
     color: inherit;
     --webkit-tap-highlight-color: transparent;
     padding: 0;
+    outline: none;
+    border: none;
 }
-
+input {
+    background: transparent;
+}
 button {
     color: none;
     outline: none;
     border: none;
     background: transparent;
     cursor: pointer;
+    padding: 0;
 }
 
 .icon {

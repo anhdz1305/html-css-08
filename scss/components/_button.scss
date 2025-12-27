@@ -1,4 +1,5 @@
 // filter btn
+@use "../abstracts";
 
 .filter-btn {
     display: flex;
@@ -14,6 +15,9 @@
     padding: 0 14px;
     border-radius: 6px;
     background: var(--filter-btn-bg-color);
+    @include abstracts.screen(xl) {
+        font-size: 1.6rem;
+    }
 }
 // Like buttton
 .like-btn {
@@ -27,10 +31,51 @@
     fill: var(--like-btn-bg-color);
     box-shadow: 0 20px 60px var(--like-btn-shadow-color);
 
-    &:not(&--liked) .like-btn__icon--liked {
+    &:not(&--liked) &__icon--liked {
         display: none;
     }
-    &--liked .like-btn__icon {
+    &--liked &__icon {
         display: none;
+    }
+}
+
+// Buttons
+.btn {
+    background: #f8f8fb;
+    padding: 0 20px;
+    height: 46px;
+    border-radius: 6px;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    user-select: none;
+
+    + .btn {
+        margin-left: 20px;
+    }
+
+    &--text {
+        color: #9e9da8;
+        font-size: 1.5rem;
+        font-weight: 400;
+        background: transparent;
+    }
+    &--primary {
+        background: #ffb700;
+    }
+    &--outline {
+        background: transparent;
+        border: 1px solid #d2d1d6;
+    }
+    &--rounded {
+        border-radius: 99px;
+    }
+    &[disabled],
+    &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &:hover {
+        opacity: 0.9;
     }
 }

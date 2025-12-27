@@ -39,11 +39,22 @@ html.dark {
 
     // Buttons
 
-    --filter-btn-color: #292e39;
+    --filter-btn-color: #fff;
     --filter-btn-bg-color: #171c28;
 
     // Product card
 
     --product-card-bg-color: #171c28;
     --product-card-shadow-color: rgba(0, 0, 0, 0.2);
+
+    // Filter
+    --filter-form-bg-color: #343947;
+    --filter-form-shadow-color: rgba(0, 0, 0, 0.4);
+    --filter-from-tag-bg: #171c28;
+    --filter-from-arrow-down-bg: brightness(0) saturate(100%) invert(23%) sepia(10%) saturate(892%) hue-rotate(187deg)
+        brightness(94%) contrast(98%);
+
+    // Footer
+    --footer-bg-color: #171c28;
+    --footer-bottom-boder: #eee;
 }
