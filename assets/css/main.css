@@ -1591,6 +1591,8 @@ html {
 }
 .footer__desc {
   margin-top: 30px;
+  font-size: 1.6rem;
+  line-height: 146.667%;
 }
 .footer__section + .footer__section {
   margin-top: 30px;
@@ -2073,6 +2075,8 @@ html {
 }
 
 .btn {
+  display: flex;
+  align-items: center;
   background: #f8f8fb;
   padding: 0 20px;
   height: 46px;
@@ -2284,7 +2288,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .filter__form-input {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 .filter__form-input-icon {
