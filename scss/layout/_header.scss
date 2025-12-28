@@ -16,12 +16,7 @@
     z-index: 1;
     @extend %flexItemCenter;
     padding: 30px 0;
-    @include abstracts.screen(sm) {
-        justify-content: space-between;
-    }
-    @include abstracts.screen(md) {
-        justify-content: space-between;
-    }
+
     @include abstracts.screen(lg) {
         justify-content: space-between;
     }
@@ -150,11 +145,18 @@
 
     margin-left: auto;
     gap: 20px;
+
     @include abstracts.screen(lg) {
         margin-left: 0;
     }
-    @include abstracts.screen(sm) {
+
+    @include abstracts.screen(md) {
         margin-left: 0;
+        &__sign-up {
+            height: 40px !important;
+            padding: 0 8px !important;
+            font-size: 1.5rem !important;
+        }
     }
 
     &__group {

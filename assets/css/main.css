@@ -1218,6 +1218,20 @@ button {
     display: none !important;
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(99%) sepia(22%) saturate(25%) hue-rotate(72deg) brightness(113%)
@@ -1307,6 +1321,7 @@ html {
   --filter-from-tag-bg: #f8f8fb;
   --footer-bg-color: #eee;
   --footer-bottom-boder: #000;
+  --auth-content-bg-color: #fff;
 }
 
 .top-act__btn, .top-act__group, .top-act, .navbar__link, .navbar__list, .top__bar {
@@ -1327,16 +1342,6 @@ html {
   position: relative;
   z-index: 1;
   padding: 30px 0;
-}
-@media (max-width: 575.98px) {
-  .top__bar {
-    justify-content: space-between;
-  }
-}
-@media (max-width: 767.98px) {
-  .top__bar {
-    justify-content: space-between;
-  }
 }
 @media (max-width: 991.98px) {
   .top__bar {
@@ -1482,9 +1487,14 @@ html {
     margin-left: 0;
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .top-act {
     margin-left: 0;
+  }
+  .top-act__sign-up {
+    height: 40px !important;
+    padding: 0 8px !important;
+    font-size: 1.5rem !important;
   }
 }
 .top-act__group {
@@ -1693,6 +1703,12 @@ html {
     gap: 10px;
   }
 }
+@media (max-width: 991.98px) {
+  .logo__img {
+    width: 24px;
+    height: 24px;
+  }
+}
 .logo__title {
   color: var(--text-color);
   /* Bold 22 */
@@ -1703,12 +1719,6 @@ html {
 @media (max-width: 991.98px) {
   .logo__title {
     font-size: 1.8rem;
-  }
-}
-@media (max-width: 991.98px) {
-  .logo__title__img {
-    width: 24px;
-    height: 24px;
   }
 }
 
@@ -2077,6 +2087,8 @@ html {
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
   background: #f8f8fb;
   padding: 0 20px;
   height: 46px;
@@ -2085,7 +2097,7 @@ html {
   font-weight: 500;
   user-select: none;
 }
-.btn + .btn {
+.btn + .btn:not(.btn--no-margin) {
   margin-left: 20px;
 }
 .btn--text {
@@ -2401,6 +2413,109 @@ html {
   font-size: 1.4rem;
 }
 
+.form:has(:invalid) .form__submit-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.form__group {
+  margin-top: 30px;
+}
+.form__group--inline {
+  display: flex;
+  align-items: center;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
+  border-color: red;
+  background: rgba(255, 0, 0, 0.1);
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__error,
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon-error {
+  display: block;
+}
+.form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
+  display: none;
+}
+.form__text-input {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1.5px solid #d2d1d6;
+  height: 50px;
+  padding: 12px;
+}
+.form__text-input:focus-within {
+  border-color: #77dae6;
+}
+.form__input {
+  flex: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.form__input::placeholder {
+  color: #d2d1d6;
+}
+.form__input-icon {
+  margin-left: 12px;
+}
+.form__input-icon-error {
+  display: none;
+  margin-left: 12px;
+  animation: shake 0.8s;
+}
+.form__error {
+  display: none;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: red;
+}
+.form__pull-right {
+  margin-left: auto;
+}
+.form__checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+.form__checkbox::before,
+.form__checkbox ::after {
+  position: absolute;
+  display: block;
+  content: "";
+}
+.form__checkbox::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 2px solid #9e9da8;
+  transform: background, border-color;
+  transition-duration: 0.3s;
+}
+.form__checkbox-label {
+  color: #9e9da8;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+  margin-left: 30px;
+}
+.form__checkbox:has(:checked)::before {
+  background: #ffb700;
+  border-color: #ffb700;
+}
+.form__checkbox:has(:checked) ::after {
+  top: 4px;
+  left: 2px;
+  width: 15px;
+  height: 9px;
+  border: 3px solid;
+  border-color: transparent transparent #fff #fff;
+  rotate: -45deg;
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2432,6 +2547,112 @@ html {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.auth {
+  display: flex;
+  min-height: 100vh;
+}
+.auth__intro, .auth__content {
+  flex: 1;
+  padding: 0 30px;
+}
+.auth__intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.auth__intro-logo, .auth__intro-next {
+  left: 50%;
+  translate: -50%;
+}
+.auth__intro-logo {
+  position: absolute;
+  top: 80px;
+}
+.auth__intro-next {
+  position: absolute;
+  bottom: 50px;
+}
+.auth__intro-img {
+  max-width: 100%;
+}
+.auth__intro-text {
+  max-width: 412px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.auth__content {
+  background: var(--auth-content-bg-color);
+}
+@media (max-width: 767.98px) {
+  .auth__content {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    transition: translate 0.5s;
+    overflow-y: auto;
+  }
+  .auth__content.hide {
+    translate: 100%;
+  }
+}
+.auth__content-inner {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: min(460px, 100%);
+  margin: 0 auto;
+}
+.auth__heading {
+  margin-top: 50px;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__desc {
+  margin-top: 10px;
+  padding: 0 30px;
+  color: #9e9da8;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__form {
+  width: 100%;
+  margin-top: 30px;
+}
+.auth__link {
+  color: #0071dc;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.auth__link-bottom {
+  font-size: 1.8rem;
+}
+.auth__btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+.auth__btn {
+  width: 100%;
+}
+.auth__text {
+  margin-top: 108px;
+  color: #9e9da8;
+  font-size: 1.8rem;
+  line-height: 144.444%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -7,6 +7,12 @@
     @include abstracts.screen(lg) {
         gap: 10px;
     }
+    &__img {
+        @include abstracts.screen(lg) {
+            width: 24px;
+            height: 24px;
+        }
+    }
     &__title {
         color: var(--text-color);
 
@@ -16,12 +22,6 @@
         line-height: 145.455%;
         @include abstracts.screen(lg) {
             font-size: 1.8rem;
-        }
-        &__img {
-            @include abstracts.screen(lg) {
-                width: 24px;
-                height: 24px;
-            }
         }
     }
 }
