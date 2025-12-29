@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grocerymart</title>
+        <link rel="stylesheet" href="./assets/css/main.css" class="css" />
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" class="fonts" />
+        <!-- js -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+
+        <!-- main -->
+        <main class="product-page">
+            <div class="container">
+                <div class="product-container">
+                    <!-- Breadcrumbs -->
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link">
+                                Departments
+                                <img src="./assets/icons/breadcrumbs-icon.svg" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee <img src="./assets/icons/breadcrumbs-icon.svg" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link">
+                                Coffee Beans
+                                <img src="./assets/icons/breadcrumbs-icon.svg" />
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link-current">LavAzza</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>

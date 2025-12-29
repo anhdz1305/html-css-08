@@ -1,0 +1,19 @@
+.message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px;
+    border-radius: 10px;
+    text-align: left;
+
+    width: 100%;
+
+    &-success {
+        background: rgba($color: #8bd399, $alpha: 0.2);
+        &__text {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
