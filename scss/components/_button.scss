@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
+    color: #1a162e;
     background: #f8f8fb;
     padding: 0 20px;
     height: 46px;
@@ -73,6 +73,7 @@
     &--outline {
         background: transparent;
         border: 1px solid #d2d1d6;
+        color: var(--button-outline-text-color);
     }
     &--rounded {
         border-radius: 99px;

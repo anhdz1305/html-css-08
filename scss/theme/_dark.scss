@@ -42,6 +42,8 @@ html.dark {
     --filter-btn-color: #fff;
     --filter-btn-bg-color: #171c28;
 
+    --button-outline-text-color: #b9babe;
+
     // Product card
 
     --product-card-bg-color: #171c28;
@@ -57,4 +59,17 @@ html.dark {
     // Footer
     --footer-bg-color: #171c28;
     --footer-bottom-boder: #eee;
+
+    //Auth
+    --auth-content-bg-color: #292e39;
+    --auth-intro-bg: #171c28;
+
+    --auth-intro-text-color: #b9babe;
+    --auth-content-heading-color: #b9babe;
+
+    @include abstracts.screen(md) {
+    }
+
+    // form
+    --form-input-placeholder-color: #b9babe;
 }

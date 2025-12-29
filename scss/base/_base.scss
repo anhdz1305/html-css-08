@@ -29,16 +29,17 @@ a {
 a,
 img,
 input,
+label,
 button,
 textarea,
 select {
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    --webkit-tap-highlight-color: transparent;
     padding: 0;
     outline: none;
     border: none;
+    --webkit-tap-highlight-color: transparent;
 }
 input {
     background: transparent;

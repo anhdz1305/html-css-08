@@ -3,7 +3,9 @@
 .auth {
     display: flex;
     min-height: 100vh;
-
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
     &__intro,
     &__content {
         flex: 1;
@@ -17,6 +19,7 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        background: var(--auth-intro-bg);
         &-logo,
         &-next {
             left: 50%;
@@ -41,6 +44,10 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+            color: var(--auth-intro-text-color);
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+            }
         }
     }
     &__content {
@@ -66,6 +73,9 @@
 
             width: min(460px, 100%);
             margin: 0 auto;
+            @include abstracts.screen(md) {
+                padding: 30px 0;
+            }
         }
     }
     &__heading {
@@ -74,22 +84,33 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 146.667%;
+
+        color: var(--auth-content-heading-color);
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            font-size: 2.2rem;
+        }
     }
 
     &__desc {
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
 
         color: #9e9da8;
         font-size: 1.5rem;
-        font-style: normal;
         font-weight: 500;
         line-height: 146.667%;
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__form {
         width: 100%;
         margin-top: 30px;
+        @include abstracts.screen(md) {
+            margin-top: 0px;
+        }
     }
 
     &__link {
@@ -98,8 +119,8 @@
         font-weight: 500;
         line-height: 146.667%;
 
-        &-bottom {
-            font-size: 1.8rem;
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
         }
     }
     &__btn-group {
@@ -108,15 +129,26 @@
         gap: 30px;
 
         margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
     &__btn {
         width: 100%;
     }
     &__text {
         margin-top: 108px;
-
         color: #9e9da8;
         font-size: 1.8rem;
         line-height: 144.444%;
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            font-size: 1.6rem;
+        }
+        &-link {
+            font-size: inherit;
+        }
     }
 }

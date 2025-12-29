@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Sign Up | grocerymart</title>
         <link rel="stylesheet" href="./assets/css/main.css" class="css" />
 
         <!-- favicon -->
@@ -23,7 +23,7 @@
             <div class="auth__intro">
                 <a href="./" class="logo auth__intro-logo d-none d-md-flex">
                     <img src="./assets/icons/logo.svg" all="grocerymart" class="logo__img" />
-                    <h1 class="logo__title">grocerymart</h1>
+                    <h2 class="logo__title">grocerymart</h2>
                 </a>
                 <img src="./assets/img/auth/auth-main.svg" alt="" class="auth__intro-img" />
                 <p class="auth__intro-text">
@@ -45,7 +45,15 @@
                     <form action="./index-logined.html" class="form auth__form" novalidate>
                         <div class="form__group">
                             <div class="form__text-input">
-                                <input type="email" name="" id="" placeholder="Email" class="form__input" required />
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    placeholder="Email"
+                                    class="form__input"
+                                    value="admin@grocerymart.com"
+                                    required
+                                />
                                 <img src="./assets/icons/email.svg" alt="" class="form__input-icon" />
                                 <img src="./assets/icons/warning-form.svg" alt="" class="form__input-icon-error" />
                             </div>
@@ -59,6 +67,7 @@
                                     id=""
                                     placeholder="Password"
                                     class="form__input"
+                                    value="adminn"
                                     required
                                     minlength="6"
                                 />
@@ -75,6 +84,7 @@
                                     id=""
                                     placeholder="Confirm Password"
                                     class="form__input"
+                                    value="adminn"
                                     required
                                     minlength="6"
                                 />
@@ -85,7 +95,7 @@
                         </div>
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" checked />
+                                <input type="checkbox" name="" id="" class="form__checkbox-input d-none" />
                                 <span class="form__checkbox-label">Set as default card</span>
                             </label>
                             <a href="" class="auth__link form__pull-right">Recovery Password</a>
@@ -93,14 +103,14 @@
                         <div class="form__group auth__btn-group">
                             <button class="btn btn--primary auth__btn btn--no-margin form__submit-btn">Sign Up</button>
                             <button class="btn btn--outline auth__btn btn--no-margin">
-                                <img src="./assets/icons/gmail.svg" alt="" class="btn__icon" />
+                                <img src="./assets/icons/gmail.svg" alt="" class="btn__icon icon" />
                                 Sign in with Google
                             </button>
                         </div>
                     </form>
                     <p class="auth__text">
                         You have an account yet?
-                        <a href="./sign-in.html" class="auth__link auth__link-bottom">Sign In</a>
+                        <a href="./sign-in.html" class="auth__link auth__text-link">Sign In</a>
                     </p>
                 </div>
             </div>
