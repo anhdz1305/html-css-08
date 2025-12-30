@@ -27,6 +27,14 @@ html.dark {
     --top-menu-boder-color: #171c28;
     --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2038%) hue-rotate(171deg)
         brightness(121%) contrast(95%);
+    // Header
+
+    // Act Dropdown
+    --header-act-dropdown-bg: #343947;
+    --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --header-act-dropdown-arrow-bg: brightness(0) saturate(100%) invert(21%) sepia(10%) saturate(1070%)
+        hue-rotate(187deg) brightness(92%) contrast(90%);
+    --header-act-dropdown-bottom-boder: #171c28;
 
     //  Sidebar
     --sidebar-bg-color: #292e39;
@@ -76,8 +84,28 @@ html.dark {
 
     // Product Detail
     --product-detail-bg: #292e39;
+    --product-info-content-bg: #171c28;
+    --product-info-content-shadow: rgba(23, 28, 40, 0.2);
+    --prod-info-tag-bg: #292e39;
+    --prod-detail-info-bg: #171c28;
 
     // breadcrumbs
     --breadcrumbs-bg: #171c28;
     --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #171c28;
+    }
+
+    // Search Bar
+    --search-bar-bg: #171c28;
+    --search-bar-icon-color-dark: brightness(0) saturate(100%) invert(87%) sepia(7%) saturate(119%) hue-rotate(191deg)
+        brightness(87%) contrast(86%);
+
+    // Review Card
+    --review-card-bg: #171c28;
+
+    @include abstracts.screen(md) {
+        --review-card-bg: #171c28;
+    }
 }
