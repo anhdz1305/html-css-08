@@ -51,7 +51,7 @@ html.dark {
     --filter-btn-bg-color: #171c28;
 
     --button-outline-text-color: #b9babe;
-
+    --btn-text-color: #fff;
     // Product card
 
     --product-card-bg-color: #171c28;
@@ -119,4 +119,8 @@ html.dark {
     --checkout-separate-bg: #292e39;
     --checkout-gift-item-icon-bg: #292e39;
     --checkout-gift-item-icon-shadow: none;
+
+    //Dialog
+    --dialog-bg: #343947;
+    --dialog-shadow: rgba(23, 28, 40, 0.4);
 }
