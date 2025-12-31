@@ -102,4 +102,14 @@ html {
     @include abstracts.screen(md) {
         --review-card-bg: #fff;
     }
+
+    // Card Info
+    --checkout-breadcrumbs-bg: #fff;
+
+    --checkout-card-info-bg: #fff;
+    --checkout-card-info-shadow: rgba(237, 237, 246, 0.2);
+
+    --checkout-separate-bg: #d2d1d6;
+    --checkout-gift-item-icon-bg: rgb(118, 68, 225, 0.1);
+    --checkout-gift-item-icon-shadow: rgba(237, 237, 246, 0.2);
 }

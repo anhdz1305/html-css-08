@@ -108,4 +108,15 @@ html.dark {
     @include abstracts.screen(md) {
         --review-card-bg: #171c28;
     }
+
+    // Card Info
+    --checkout-breadcrumbs-bg: #171c28;
+    --checkout-breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
+
+    --checkout-card-info-bg: #171c28;
+    --checkout-card-info-shadow: rgba(23, 28, 40, 0.2);
+
+    --checkout-separate-bg: #292e39;
+    --checkout-gift-item-icon-bg: #292e39;
+    --checkout-gift-item-icon-shadow: none;
 }

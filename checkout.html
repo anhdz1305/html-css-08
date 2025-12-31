@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout | grocerymart</title>
+        <link rel="stylesheet" href="./assets/css/main.css" class="css" />
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+        <!-- fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" class="fonts" />
+        <!-- js -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+
+        <!-- main -->
+        <main class="checkout-page">
+            <div class="container">
+                <div class="checkout-container">
+                    <!-- Search -->
+                    <div class="search-bar d-none d-md-flex">
+                        <input type="text" id="" name="" placeholder="Search for item" class="search-bar__input" />
+                        <button class="search-bar__submit">
+                            <img src="./assets/icons/search.svg" alt="" class="search-bar__icon icon" />
+                        </button>
+                    </div>
+                </div>
+
+                <div class="checkout-container">
+                    <!-- Breadcrumbs -->
+                    <ul class="breadcrumbs checkout-page__breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="./" class="breadcrumbs__link">
+                                Home
+                                <img src="./assets/icons/breadcrumbs-icon.svg" />
+                            </a>
+                        </li>
+
+                        <li class="breadcrumbs__item">
+                            <a href="#!" class="breadcrumbs__link breadcrumbs__link-current">Checkout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Checkout Content -->
+                <div class="checkout-container">
+                    <div class="row gy-xl-3">
+                        <div class="col-8 col-xl-12">
+                            <div class="card-info">
+                                <div class="card-info__list">
+                                    <!-- Card Item 1 -->
+                                    <div class="card-item">
+                                        <a href="./product-detail.html">
+                                            <img src="./assets/img/product/product-1.png" class="card-item__thumb" />
+                                        </a>
+                                        <div class="card-item__content">
+                                            <div class="card-item__content-left">
+                                                <h3 class="card-item__title">
+                                                    <a href="./product-detail.html">
+                                                        Coffee Beans - Espresso Arabica and Robusta Beans
+                                                    </a>
+                                                </h3>
+                                                <div class="card-item__price-wrap">
+                                                    $47.00 | <span class="card-item__status">In Stock</span>
+                                                </div>
+                                                <div class="card-item__ctrl card-item__ctrl--md-block">
+                                                    <div class="card-item__input">
+                                                        LavAzza
+                                                        <img src="./assets/icons/arrow-down-2.svg" />
+                                                    </div>
+                                                    <div class="card-item__input">
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/minus.svg" class="icon" />
+                                                        </button>
+                                                        <span> 1</span>
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/plus.svg" class="icon" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-item__content-right">
+                                                <p class="card-item__total-price">$47.00</p>
+                                                <div class="card-item__ctrl">
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/heart-2.svg" />
+                                                        Save
+                                                    </button>
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/delete.svg" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card Item 2 -->
+                                    <div class="card-item">
+                                        <a href="./product-detail.html">
+                                            <img src="./assets/img/product/product-2.png" class="card-item__thumb" />
+                                        </a>
+                                        <div class="card-item__content">
+                                            <div class="card-item__content-left">
+                                                <h3 class="card-item__title">
+                                                    <a href="./product-detail.html">
+                                                        Lavazza Coffee Blends - Try the Italian Espresso
+                                                    </a>
+                                                </h3>
+                                                <div class="card-item__price-wrap">
+                                                    $53.00 | <span class="card-item__status">In Stock</span>
+                                                </div>
+                                                <div class="card-item__ctrl card-item__ctrl--md-block">
+                                                    <div class="card-item__input">
+                                                        LavAzza
+                                                        <img src="./assets/icons/arrow-down-2.svg" class="icon" />
+                                                    </div>
+                                                    <div class="card-item__input">
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/minus.svg" class="icon" />
+                                                        </button>
+                                                        <span> 2</span>
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/plus.svg" class="icon" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-item__content-right">
+                                                <p class="card-item__total-price">$106.00</p>
+                                                <div class="card-item__ctrl">
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/heart-2.svg" />
+                                                        Save
+                                                    </button>
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/delete.svg" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Card Item 3 -->
+                                    <div class="card-item">
+                                        <a href="./product-detail.html">
+                                            <img src="./assets/img/product/product-3.png" class="card-item__thumb" />
+                                        </a>
+                                        <div class="card-item__content">
+                                            <div class="card-item__content-left">
+                                                <h3 class="card-item__title">
+                                                    <a href="./product-detail.html">
+                                                        Qualità Oro Mountain Grown - Espresso Coffee Beans
+                                                    </a>
+                                                </h3>
+                                                <div class="card-item__price-wrap">
+                                                    $38.65 | <span class="card-item__status">In Stock</span>
+                                                </div>
+                                                <div class="card-item__ctrl card-item__ctrl--md-block">
+                                                    <div class="card-item__input">
+                                                        LavAzza
+                                                        <img src="./assets/icons/arrow-down-2.svg" class="icon" />
+                                                    </div>
+                                                    <div class="card-item__input">
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/minus.svg" class="icon" />
+                                                        </button>
+                                                        <span> 1</span>
+                                                        <button class="card-item__input-btn">
+                                                            <img src="./assets/icons/plus.svg" class="icon" />
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-item__content-right">
+                                                <p class="card-item__total-price">$38.65</p>
+                                                <div class="card-item__ctrl">
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/heart-2.svg" />
+                                                        Save
+                                                    </button>
+                                                    <button class="card-item__ctrl-btn">
+                                                        <img src="./assets/icons/delete.svg" />
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-info__bottom d-md-none">
+                                    <div class="row">
+                                        <div class="col-8 col-xxl-7">
+                                            <div class="card-info__continue">
+                                                <a href="./" class="card-info__continue-link">
+                                                    <img
+                                                        src="./assets/icons/arrow-down-2.svg"
+                                                        alt=""
+                                                        class="card-info__continue-icon icon"
+                                                    />
+                                                    Continue Shopping
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-xxl-5">
+                                            <div class="card-info__row">
+                                                <span>Subtotal:</span>
+                                                <span>$191.65</span>
+                                            </div>
+                                            <div class="card-info__row">
+                                                <span>Shipping:</span>
+                                                <span>$10.00</span>
+                                            </div>
+                                            <div class="card-info__separate"></div>
+                                            <div class="card-info__row card-info__row--bold">
+                                                <span>Total:</span>
+                                                <span>$201.65</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-xl-12">
+                            <div class="card-info">
+                                <div class="card-info__row">
+                                    <span>
+                                        Subtotal
+                                        <span class="card-info__sub-label"> (items) </span>
+                                    </span>
+                                    <span>3</span>
+                                </div>
+                                <div class="card-info__row">
+                                    <span>
+                                        Price
+                                        <span class="card-info__sub-label"> (Total) </span>
+                                    </span>
+                                    <span>$455.98</span>
+                                </div>
+                                <div class="card-info__row">
+                                    <span>Shipping</span>
+                                    <span>$10.00</span>
+                                </div>
+                                <div class="card-info__separate"></div>
+                                <div class="card-info__row">
+                                    <span>Estimated Total</span>
+                                    <span>$201.65</span>
+                                </div>
+                                <a href="#!" class="card-info__next-btn btn--primary btn--rounded btn"
+                                    >Continue to checkout</a
+                                >
+                            </div>
+
+                            <div class="card-info">
+                                <a href="#!">
+                                    <div class="gift-item">
+                                        <div class="gift-item__icon-wrap">
+                                            <img src="./assets/icons/gift.svg" alt="" class="gift-item__icon" />
+                                        </div>
+                                        <div class="gift-item__content">
+                                            <h3 class="gift-item__title">Send this order as a gift.</h3>
+                                            <p class="gift-item__desc">
+                                                Available items will be shipped to your gift recipient.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+    </body>
+</html>
