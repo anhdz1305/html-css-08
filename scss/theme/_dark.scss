@@ -120,7 +120,12 @@ html.dark {
     --checkout-gift-item-icon-bg: #292e39;
     --checkout-gift-item-icon-shadow: none;
 
-    //Dialog
-    --dialog-bg: #343947;
-    --dialog-shadow: rgba(23, 28, 40, 0.4);
+    //modal
+    --modal-bg: #343947;
+    --modal-shadow: rgba(23, 28, 40, 0.4);
+
+    --modal-form-search-boder: #9e9da8;
+
+    // Payment
+    --payment-item-bg: #292e39;
 }
