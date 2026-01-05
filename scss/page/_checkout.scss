@@ -42,6 +42,7 @@
         font-weight: 500;
         line-height: 144.444%;
     }
+
     &__continue {
         height: 100%;
         display: flex;
@@ -72,6 +73,17 @@
             font-weight: 700;
             line-height: 145.455%;
         }
+        &--block {
+            margin-top: 30px;
+            @include abstracts.screen(md) {
+                margin-top: 0px;
+                padding: 20px 0 0 0;
+                border-top: 1px solid var(--checkout-separate-bg);
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start !important;
+            }
+        }
     }
 
     &__separate {
@@ -86,6 +98,10 @@
         margin-top: 30px;
     }
 
+    &__back-arrow {
+        width: 20px;
+        margin-right: 20px;
+    }
     // Shipping
 
     &__heading {
@@ -153,6 +169,16 @@
             }
         }
     }
+
+    // Favorive
+    &__check-all {
+        margin: 30px 0;
+    }
+    &__all-checkout {
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
+    }
 }
 .gift-item {
     display: flex;
@@ -185,13 +211,12 @@
 }
 .card-item {
     display: flex;
-    gap: 30px;
     padding: 30px 0;
 
     border-bottom: 1px solid var(--checkout-separate-bg);
     @include abstracts.screen(md) {
         padding: 16px 0;
-        gap: 16px;
+
         &:last-child {
             border-bottom: none;
         }
@@ -201,6 +226,9 @@
         width: 172px;
         height: 172px;
         object-fit: contain;
+
+        margin: 0 30px 0 20px;
+
         @include abstracts.screen(xxl) {
             width: 150px;
             height: 150px;
@@ -212,8 +240,10 @@
         @include abstracts.screen(md) {
             width: 60px;
             height: 60px;
+            margin: 0 16px;
         }
     }
+
     &__content {
         display: flex;
         flex: 1;
@@ -257,6 +287,10 @@
         min-height: 44px;
 
         margin-top: auto;
+
+        @include abstracts.screen(sm) {
+            gap: 10px;
+        }
 
         &--md-block {
             @include abstracts.screen(md) {
@@ -306,6 +340,25 @@
         line-height: 150%;
         &:first-child {
             margin-right: 10px;
+        }
+    }
+
+    // Favorite
+    &__ctrl-wrap {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    &__checkout-btn {
+        margin-top: auto;
+
+        @include abstracts.screen(md) {
+            max-width: 200px;
         }
     }
 }

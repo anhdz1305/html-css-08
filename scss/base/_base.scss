@@ -43,7 +43,6 @@ select {
 }
 label {
     display: block;
-    width: 100%;
 }
 
 input:-webkit-autofill,
@@ -78,4 +77,11 @@ em {
 b,
 strong {
     font-weight: 600px;
+}
+
+.saparate {
+    margin: var(--margin);
+    width: 100%;
+    height: 1px;
+    background: var(--header-act-dropdown-bottom-boder);
 }

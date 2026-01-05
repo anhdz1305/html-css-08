@@ -25,7 +25,7 @@ html {
     --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
     --top-menu-boder-color: #d2d1d6;
     // Header
-
+    --header-lg-shadow-color: rgba(237, 237, 246, 0.2);
     // Act Dropdown
     --header-act-dropdown-bg: #fff;
     --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
@@ -121,4 +121,16 @@ html {
 
     // Payment
     --payment-item-bg: #f6f6f6;
+
+    // Profile
+    --profile-bg: #fff;
+    --profile-shadow: rgba(237, 237, 246, 0.2);
+    --profile-user-text-color: #fff;
+    --profile-user-shadow: rgba(237, 237, 246, 0.2);
+
+    --profile-menu-link-hover: #ebebeb;
+
+    // Account info
+    --account-info-bg: #f8f8fb;
+    --account-info-icon-bg: #f8f8fb;
 }

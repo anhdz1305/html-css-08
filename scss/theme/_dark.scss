@@ -28,6 +28,7 @@ html.dark {
     --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2038%) hue-rotate(171deg)
         brightness(121%) contrast(95%);
     // Header
+    --header-lg-shadow-color: rgba(0, 0, 0, 0.2);
 
     // Act Dropdown
     --header-act-dropdown-bg: #343947;
@@ -128,4 +129,16 @@ html.dark {
 
     // Payment
     --payment-item-bg: #292e39;
+
+    // Profile
+    --profile-bg: #171c28;
+    --profile-shadow: rgba(23, 28, 40, 0.2);
+    --profile-user-text-color: #fff;
+    --profile-user-shadow: rgba(23, 28, 40, 0.2);
+
+    --profile-menu-link-hover: #323b53;
+
+    // Account info
+    --account-info-bg: #292e39;
+    --account-info-icon-bg: #171c28;
 }
